@@ -1,0 +1,24 @@
+<br>
+<div class="login-container">
+    <form class="login-form" [formGroup]="form" (ngSubmit)="signup()">
+
+        <h1>Welcome Back</h1>
+        <p>Please login to your account</p>
+        <span>{{loginError}}</span>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" formControlName="password" >
+
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Submit</button>
+        <div class="bottom-text">
+            <p>Don't have an account? <a routerLink="/register">Sign Up</a></p>
+            <p><a routerLink="/forgot-password">Forgot password?</a></p>
+        </div>
+    </form>
+</div>
+<br>
