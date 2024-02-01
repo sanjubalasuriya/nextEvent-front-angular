@@ -1,0 +1,23 @@
+<div class="outer">
+    <div class="container">
+        <div class="inner">
+            <div class="card-outers" *ngFor="let event of events">
+                <div class="img-outer">
+                    <img src="assets/bnns%20event%20banner%20new.jpg" alt="">
+                </div>
+                <div class="card-body-outer">
+                    <div class="date-time">
+                        <div class="date-outer"><mat-icon>event</mat-icon><p class="date">{{event.eventDate}}</p></div>
+                        <div class="time-outer"><mat-icon>schedule</mat-icon><p class="time">gh</p></div>
+                    </div>
+                    <h5 class="event-name">{{event.eventName}}</h5>
+                    <div class="location">
+                        <mat-icon>location_on</mat-icon><p class="location-name">{{event.eventLocation}}</p>
+                    </div>
+
+                </div>
+                <a class="buy-button" [routerLink]="['/event-details/:id']" [queryParams]="{id: event.eventId}"><mat-icon class="footer-icon">payments</mat-icon><p class="button-name">Buy Tickets</p></a>
+            </div>
+        </div>
+    </div>
+</div>
