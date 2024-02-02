@@ -42,7 +42,7 @@ export class BookTicketComponent implements OnInit {
             this.allTickets()
         })
         this.allTickets()
-
+        console.log(this.category)
     }
 
     allTickets() {
@@ -52,8 +52,11 @@ export class BookTicketComponent implements OnInit {
             ).subscribe(response => {
                 this.category = response.data
 
+
+
+
                 this.cartService.getByCustomerId(1).subscribe(response => {
-                    console.log(this.category)
+
                     if (response.data.length > 0) {
 
                         for (let i = 0; i < this.category.length; i++) {

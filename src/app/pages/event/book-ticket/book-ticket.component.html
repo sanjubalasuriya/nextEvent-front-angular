@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="cart-btn-outer">
-
+                    <button type="button" class="btn btn-primary"  *ngIf="!data.qty" (click)=addTicket(data)>Buy Tickets</button>
                     <div class="cart-add" *ngIf="data.qty">
                         <div class="plus-btn-outer" (click)=plusTicketCount(data)><mat-icon   >add_circle</mat-icon></div>
                         <div class="item-count-outer">{{data.qty ?? '0'}}</div>
