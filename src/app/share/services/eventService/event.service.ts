@@ -23,6 +23,10 @@ export class EventService {
     return this.http.get('http://localhost:8003/api/v1/ticket-category/get-by-eventId?eventId='+id)
   }
 
+  public getCategoryById(id:any):Observable<any>{
+    return this.http.get('http://localhost:8003/api/v1/ticket-category/get-by-id?categoryId='+id)
+  }
+
   get refreshList(){
     return this._refreshNeeded$;
   }
