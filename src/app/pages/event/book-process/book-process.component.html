@@ -1,0 +1,34 @@
+<div class="outer">
+    <div class="container">
+        <h1 class="title">Booking Process</h1>
+
+        <div class="card-outer">
+            <div class="card-inner" *ngFor="let data of category">
+                <div class="ticket-details">
+                    <h2>Event : {{data.eventName}}</h2>
+                    <h3 class="category-name">Ticket : {{data.categoryName}}</h3>
+                    <p class="price">Price : {{data.price}}</p>
+                </div>
+
+                <div class="cart-btn-outer">
+                    <div class="cart-add" *ngIf="data.qty">
+                        <div class="plus-btn-outer" (click)=plusTicketCount(data)><mat-icon   >add_circle</mat-icon></div>
+                        <div class="item-count-outer">{{data.qty ?? '0'}}</div>
+                        <div class="minus-btn-outer" (click)=minusTicketCount(data)><mat-icon >do_not_disturb_on</mat-icon></div>
+                    </div>
+
+                </div>
+                <div class="price-outer"> <p>LKR : {{data.qty * data.price}}</p></div>
+
+
+            </div>
+        </div>
+
+        <div class="summery">
+            <h3>Summery</h3>
+            <p>Total : {{total}}</p>
+            <button type="button" class="btn btn-primary"  (click)="saveTickets()">Checkout</button>
+        </div>
+    </div>
+
+</div>
