@@ -1,0 +1,30 @@
+.banner{
+  width: 100%;
+
+  img{
+    width: 100%;
+  }
+}
+
+.form{
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.description-outer{
+  padding: 20px 0;
+  hr{
+    margin-top: 0;
+  }
+  h5{
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  h1{
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+
+}

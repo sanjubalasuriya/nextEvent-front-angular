@@ -1,0 +1,65 @@
+<div class="outer">
+    <div class="banner"><img src="assets/bnns%20event%20banner%20new.jpg" alt=""></div>
+    <div class="container">
+        <div class="row">
+            <div class="description-outer col-lg-9">
+                <h5>Summery</h5>
+                <hr>
+                <h1>{{name}}</h1>
+
+                <p>>>> Please take note of the following guidelines when purchasing online tickets. / අන්තර්ජාල
+                    ප්‍රවේශපත්‍ර ලබා ගැනීමේදී පහත කරුණු පිළිබඳව ඔබගේ අවධානය යොමු කරන්න.<<<
+                </p>
+                <p>01. All tickets purchased are non-refundable.</p>
+                <p>01. අන්තර්ජාල ප්‍රවේශපත්‍රය කිසිදු ආකාරයකින් නැවත ගෙවීමක් සිදු කරනු නොලැබේ.</p>
+                <p>02. Please note that our online tickets cannot be changed once purchased. This includes changes to
+                    the category, show, seat, price, or any other aspects of the ticket. We highly recommend that you
+                    carefully review your selection before completing your online purchase to ensure that you have
+                    chosen the correct ticket.</p>
+                <p>02. අන්තර්ජාල ප්‍රවේශපත්‍රයක් කිසිදු අයුරකින් හෝ කිසිදු හේතුවක් මත වෙනස් කිරීමකට ( ඛාණ්ඩය / ප්‍රසංගය
+                    / ආසන හෝ ආසනය / මිළ ආදී කිසිවක්... ) හැකියාවක් නොමැති අතර කිසිදු අයුරකින් නැවත ගෙවීමක් අප විසින්
+                    සිදු කරනු නොලැබේ. එම නිසා ඔබගේ අන්තර්ජාල ප්‍රවේශ පත්‍රය නිවැරදි ලෙස තෝරා ලබාගන්න.</p>
+                <p>03. Please note that online tickets are only available for redeem from one hour before the start of
+                    the event until one hour after the event has started. MyTicketsLK will not issue online tickets
+                    after this time and cannot be held responsible for any inconvenience caused. To ensure you have
+                    enough time to enjoy the event, please make sure to arrive at the venue on time.</p>
+                <p>03. අන්තර්ජාල ප්‍රවේශ පත්‍ර නිකුත්කරන්නේ ප්‍රසංගය ආරම්භ කිරීමට පැයකට පෙර සහ ප්‍රසංගය ආරම්භ කර පැයක්
+                    ගතවනතුරු පමණි. ඉන්පසු අප විසින් අන්තර්ජාල ප්‍රවේශපත්‍ර නිකුත් නොකරන අතර සිදුවන අපහසුතාවන් සඳහා අප
+                    ආයතනය කිසිඳු වගකීමක් නොදරයි. එමනිසා සැම විටම නියමිත වෙලාවට පෙර ප්‍රසංගය සඳහා පැමිණීම ඔබගේ වගකීම වනු
+                    ඇත.
+                </p>
+                <p>04. Only the initial email or SMS provided by MyTicketsLK will be accepted as proof of purchase,
+                    Tickets will not be redeemed for any forwarded or screenshots .</p>
+                <p>04. ප්‍රවේශපත්‍ර නිකුත් කරණු ලබන්නේ MyTicketsLK ප්‍රවේශපත්‍රය ලබා ගැනීමේදී අප විසින් ඔබ වෙත එවන ලද
+                    වලංගු Email Confirmation හෝ SMS පණිවිඩය පමණක් ප්‍රවේශ පත්‍ර වලංගු කිරීමට භාවිත කරන අතර Screenshot,
+                    Forwarded Email පණිවිඩ සඳහා සහ වෙනයම් අයෙකුට කුමන හේතුවක් නිසා අප විසින් ප්‍රවේශපත්‍ර නිකුත් කරනු
+                    නොලැබේ.</p>
+            </div>
+            <div class="col-lg-3 col-12">
+                <form action="" [formGroup]="form" (ngSubmit)="getTicket()" class="form">
+                    <div class="mb-3">
+                        <label  class="form-label">Location</label>
+                        <input type="text" class="form-control"  formControlName="location"
+                               placeholder="">
+                    </div>
+
+                    <div class="mb-3">
+                        <label  class="form-label">Date</label>
+                        <input type="text" class="form-control"  formControlName="date"
+                               placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Time</label>
+                        <input type="text" class="form-control" formControlName="time"
+                               placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-primary" routerLink="/book-tickets/:id" [queryParams]="{id: id}">Buy Tickets</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
