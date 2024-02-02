@@ -42,6 +42,10 @@ export class CartService {
     return this.http.get('http://localhost:8003/api/v1/cart/get-by-customerId?customerId='+customerId)
   }
 
+  public deleteCart(cartId:any):Observable<any>{
+    return this.http.delete('http://localhost:8003/api/v1/cart/delete/'+cartId)
+  }
+
   get refreshList(){
     return this._refreshNeeded$;
   }
