@@ -22,7 +22,8 @@ export const httpManagerInterceptor: HttpInterceptorFn = (
 
       catchError(err => {
         if(err.status == 403){
-          router.navigate(['/']);
+          router.navigate(['/login']);
+
         }
         return throwError(err);
       })
